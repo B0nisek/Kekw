@@ -1,4 +1,3 @@
-# Kekw
 # Retri meter
 
 2 minute fights, 0 armor
