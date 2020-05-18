@@ -7,7 +7,12 @@ namespace Rawr2
     {
         static void Main(string[] args)
         {
-            int.TryParse(args.First(), out var tries);
+            var tries = 0;
+
+            if (args.Length != 0)
+            {
+                int.TryParse(args.First(), out tries);
+            }
 
             RetriCompare(tries == 0 ? 1000 : tries);
         }
