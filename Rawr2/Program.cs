@@ -18,7 +18,7 @@ namespace Rawr2
             for (var i = 0; i < tries; i++)
             {
                 totalWf += Retri();
-                totalNoWf += Retri(false);
+                totalNoWf += Retri(isWf: false);
             }
 
             Console.WriteLine($"");
