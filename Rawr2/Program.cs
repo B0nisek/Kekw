@@ -1,19 +1,21 @@
 ﻿using System;
+using System.Linq;
 
 namespace Rawr2
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            RetriCompare();
+            int.TryParse(args.First(), out var tries);
+
+            RetriCompare(tries == 0 ? 1000 : tries);
         }
 
-        public static void RetriCompare()
+        public static void RetriCompare(int tries)
         {
             var totalWf = 0d;
             var totalNoWf = 0d;
-            var tries = 100;
 
             for (var i = 0; i < tries; i++)
             {
@@ -21,9 +23,8 @@ namespace Rawr2
                 totalNoWf += Retri(isWf: false);
             }
 
-            Console.WriteLine($"");
             Console.WriteLine($"WF");
-            Console.WriteLine($"Number of tries: {(tries).ToString("n2")}x");
+            Console.WriteLine($"Number of tries: {tries}x");
             Console.WriteLine($"AVG: {(totalWf / tries).ToString("n2")} DMG; {(totalWf / tries / 120).ToString("n2")} DPS");
             Console.WriteLine($"");
             Console.WriteLine($"No WF");

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Rawr2": {
+      "commandName": "Project",
+      "commandLineArgs": "1000"
+    }
+  }
+}
